@@ -191,7 +191,7 @@
 
       const purePrice = weight * price;
       const wage = purePrice * (wagePercent / 100);
-      const profit = purePrice * (profitPercent / 100);
+      const profit = (purePrice + wage) * (profitPercent / 100);
       const tax = 0.1 * (wage + profit);
       let total = purePrice + wage + profit + tax;
 
